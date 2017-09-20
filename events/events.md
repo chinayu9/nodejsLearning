@@ -1,0 +1,9 @@
+【发布--订阅模式】
+events模块只提供了一个对象：events.EventEmitter
+所有能触发事件的对象都是EventEmitter类的实例。
+EventEmitter对象如果在实例化时发生错误，会触发error事件。当添加新的监听器时，newListener事件会触发。当
+监听器被移除时，removeListener事件被触发。
+EventEmitter提供了多个属性，on函数用于绑定事件函数，emit属性用于触发一个事件。
+使用once()方法时可以注册一个对于特定事件最多被调用一次的监听器。当事件被触发时，监听器会被注销，然后在调用
+emitter.prependListener(eventName,listener)--添加listener函数到名为eventName的事件的监听器数组的开头
+emitter.setMaxListeners(n)---设置监听器的限制数量
